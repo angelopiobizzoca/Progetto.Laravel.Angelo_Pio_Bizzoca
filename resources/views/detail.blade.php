@@ -19,7 +19,7 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href='/'>Home</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href='/seconda-pagina'>Seconda Pagina</a>
@@ -35,51 +35,17 @@
             </div>
         </div>
     </div>
-    <h1 class="text-center">Un mondo di musica</h1>
-    <h2 class="text-center">Immergiti nel mondo della musica</h2>
-    <div class="container-fluid">
-      <div class="row mt-3">
-        @foreach ($albums as $album)
-        <div class="col-12 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="{{$album['img']}}" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">{{$album['title']}} {{$album['id']}}</h5>
-              <p class="card-text">{{$album['description']}}</p>
-              <a href="{{route('pagina-dettaglio', ['id' =>$album['id']])}}" class="btn btn-primary">Click here</a>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Pagina di dettaglio di {{$album['title']}}</h1>
+                <p>{{$album['description']}}</p>
             </div>
-          </div>
         </div>
-        @endforeach
-      </div>
     </div>
+
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
